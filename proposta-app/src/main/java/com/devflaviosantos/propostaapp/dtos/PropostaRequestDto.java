@@ -16,6 +16,6 @@ public class PropostaRequestDto {
     private String telefone;
     private String cpf;
     private Double renda;
-    private Double valorSolicitacao;
+    private Double valorSolicitado;
     private int prazoPagamento;
 }

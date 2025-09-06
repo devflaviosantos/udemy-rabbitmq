@@ -24,8 +24,8 @@ public class Proposta {
 
     private boolean integrada;
 
-    private String Observacao;
-    @OneToOne
+    private String observacao;
+    @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "usuario_id")
     private Usuario usuario;
 
