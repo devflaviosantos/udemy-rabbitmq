@@ -16,7 +16,9 @@ import java.util.List;
 public class PropostaController {
 
     private PropostaService propostaService;
-aty<PropostaResponseDto> salvarProposta(@RequestBody PropostaRequestDto propostaRequestDto) {
+
+    @PostMapping
+    public ResponseEntity<PropostaResponseDto> salvarProposta(@RequestBody PropostaRequestDto propostaRequestDto) {
         PropostaResponseDto responseDto = propostaService.salvarProposta(propostaRequestDto);
         return ResponseEntity.created(ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}")
